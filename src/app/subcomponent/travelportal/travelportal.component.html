@@ -1,0 +1,87 @@
+<h2 class="page-header">Mumbai-Pune Journey</h2>
+<p>Enter the fields below:</p>
+<form (submit)="Submitdata()">
+    <div class="form-group d-flex">
+        <label><h5>Source:</h5></label>
+    <input type="text" class="form-control ml-1 mr-3" placeholder="Enter your source here" [(ngModel)]="source" name="username">
+    
+        <label><h5>Destination:</h5></label>
+    <input type="text" class="form-control ml-1" placeholder="Enter your destination here" [(ngModel)]="destination" name="password">
+    </div>
+<input type="submit" class="btn btn-primary" value="Check Time">
+</form>
+
+
+<!--<div class="container">
+      <div fxLayout="row" fxLayoutAlign="center center" class="content">
+        <mat-card class="card" >
+          <mat-card-title fxLayout.gt-xs="row" fxLayout.xs="column">
+            <h3>Schedule</h3>
+          </mat-card-title>
+          <mat-card-content>
+              <div class="example-container mat-elevation-z8">
+                  <mat-table #table [dataSource]="Filtertime">
+                  
+                  <ng-container matColumnDef="source">
+                    <mat-header-cell *matHeaderCellDef>Source </mat-header-cell>
+                    <mat-cell *matCellDef="let element"> {{element.source}} </mat-cell>
+                  </ng-container>
+
+                  
+                    <ng-container matColumnDef="destination">
+                      <mat-header-cell *matHeaderCellDef>Destination </mat-header-cell>
+                      <mat-cell *matCellDef="let element"> {{element.destination}} </mat-cell>
+                    </ng-container>
+
+                    
+                    <ng-container matColumnDef="time">
+                      <mat-header-cell *matHeaderCellDef> Time </mat-header-cell>
+                      <mat-cell *matCellDef="let element"> {{element.time}} </mat-cell>
+                    </ng-container>
+
+                    
+                    <ng-container matColumnDef="bookticket">
+                      <mat-header-cell *matHeaderCellDef></mat-header-cell>
+                      <mat-cell *matCellDef="let element">
+                        <a
+                            type="button">
+                          <mat-icon class="icon">Book ticket</mat-icon>
+                        </a>
+                      </mat-cell>
+                    </ng-container>
+                    
+                    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+                  </mat-table>
+                </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+</div>-->
+
+
+<!--<h2>list</h2>
+<div class="col">
+    <div *ngFor = "let item of Filtime" class="">
+     {{item.source}}--{{item.destination}}--{{item.time}}
+    </div>
+</div>-->
+
+<h2>Schedule:</h2>
+<div class="bg">
+<table class="table" >
+  <thead class="thead-light">
+  <th>Source</th>
+  <th>Destination</th>
+  <th>Time</th>
+  </thead>
+  <tbody>
+  <tr *ngFor="let item of Filtime">
+  <td>{{item.source}}</td>
+  <td>{{item.destination}}</td>
+  <td>{{item.time}}</td>
+  <!--<td><button color="warn" (click)="deleteIssue(item._id)">D</button><td>-->
+  </tr>
+  </tbody>
+</table>
+</div>

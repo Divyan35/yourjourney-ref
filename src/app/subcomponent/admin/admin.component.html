@@ -1,0 +1,17 @@
+<form (submit)="Submittimedata()">
+    <div class="form-group d-flex">
+        <label><h5>Source:</h5></label>
+    <input type="text" class="form-control ml-1 mr-3" placeholder="Enter your source here" [(ngModel)]="source" name="source">
+    </div>
+    <br>
+    <div>
+        <label><h5>Destination:</h5></label>
+    <input type="text" class="form-control ml-1" placeholder="Enter your destination here" [(ngModel)]="destination" name="destination">
+    </div>
+<br>
+    <div>
+    <label><h5>Time:</h5></label>
+    <input type="text" class="form-control ml-1" placeholder="Enter your destination here" [(ngModel)]="time" name="time">
+    </div>
+<input type="submit" class="btn btn-primary" value="send data">
+</form>
